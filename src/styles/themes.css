@@ -1,0 +1,76 @@
+/*
+  Light and dark values for the semantic tokens. The brand palette is in tokens.css.
+  Neutral and calm: flat surfaces, thin lines, color only for the accent and status.
+*/
+
+:root,
+[data-theme="light"] {
+  color-scheme: light;
+  --canvas: #ffffff;
+  --sidebar: #f7f8f7;
+  --surface: #ffffff;
+  --surface-muted: #f5f6f5;
+  --hover: rgb(17 24 21 / 0.04);
+  --line: #e9ebe9;
+  --line-strong: #d8dcd9;
+  --fg: #1b1f1d;
+  --muted: #6a726e;
+  --heading: #101412;
+  --accent: var(--emerald);
+  --accent-soft: rgb(31 122 90 / 0.09);
+  --on-accent: var(--white);
+  --host: #1f6fc4;
+  --host-soft: rgb(31 111 196 / 0.09);
+  --danger: #c93a32;
+  --danger-soft: rgb(201 58 50 / 0.08);
+  --warning: #956404;
+  --warning-soft: rgb(245 184 61 / 0.16);
+  --skeleton: #eef0ee;
+  --skeleton-shine: rgb(255 255 255 / 0.7);
+  --scrim: rgb(16 20 18 / 0.2);
+  --overlay-bg: rgb(255 255 255 / 0.86);
+  --overlay-edge: rgb(16 20 18 / 0.08);
+  --focus-ring: var(--emerald);
+  --elevation-overlay: 0 0 0 1px rgb(16 20 18 / 0.04), 0 16px 48px rgb(16 20 18 / 0.14);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --canvas: #0c0e0d;
+  --sidebar: #0f1110;
+  --surface: #121514;
+  --surface-muted: #171a19;
+  --hover: rgb(255 255 255 / 0.04);
+  --line: #1f2321;
+  --line-strong: #2b302d;
+  --fg: #e2e6e3;
+  --muted: #868e8a;
+  --heading: #f3f5f4;
+  --accent: var(--mint);
+  --accent-soft: rgb(61 220 151 / 0.1);
+  --on-accent: #06281c;
+  --host: #7dbcff;
+  --host-soft: rgb(125 188 255 / 0.1);
+  --danger: #f0776f;
+  --danger-soft: rgb(240 119 111 / 0.1);
+  --warning: #f5c060;
+  --warning-soft: rgb(245 184 61 / 0.1);
+  --skeleton: #1a1e1c;
+  --skeleton-shine: rgb(255 255 255 / 0.04);
+  --scrim: rgb(0 0 0 / 0.5);
+  --overlay-bg: rgb(20 23 22 / 0.86);
+  --overlay-edge: rgb(255 255 255 / 0.07);
+  --focus-ring: var(--mint);
+  --elevation-overlay: 0 0 0 1px rgb(0 0 0 / 0.3), 0 16px 48px rgb(0 0 0 / 0.5);
+}
+
+/* Settings > Appearance > Reduce transparency: overlays turn solid. */
+[data-transparency="reduced"] {
+  --overlay-bg: var(--surface);
+  --overlay-blur: 0px;
+}
+
+/* Settings > Appearance > Compact tables. */
+[data-density="compact"] {
+  --row-pad: 0.4375rem;
+}

@@ -1,0 +1,67 @@
+/* The one frosted surface: modals, drawers and menus that sit above the page. */
+@utility overlay-surface {
+  background-color: var(--overlay-bg);
+  border: 1px solid var(--overlay-edge);
+  box-shadow: var(--elevation-overlay);
+  backdrop-filter: blur(var(--overlay-blur)) saturate(140%);
+  -webkit-backdrop-filter: blur(var(--overlay-blur)) saturate(140%);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--canvas);
+    color: var(--fg);
+    font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--accent-soft);
+    color: var(--heading);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+    border-radius: var(--shape-xs);
+  }
+
+  /* Tailwind v4 resets buttons to the default cursor. Restore pointer for controls. */
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [role="switch"],
+  [role="radio"],
+  [role="tab"],
+  label[for],
+  select {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  [aria-disabled="true"] {
+    cursor: not-allowed;
+  }
+
+  td,
+  th {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
