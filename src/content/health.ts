@@ -57,7 +57,12 @@ export const healthCopy = {
     adminErrors: "Errors (7 days)", openErrors: "Open errors", openBugs: "Open bug reports", security: "Security events (24 h)",
     never: "Never", seconds: "s", ms: "ms",
   },
-  jobs: { expire_requests: "Booking expiry", cleanup: "30-day cleanup", landing_uptime: "Landing uptime check" } as Record<string, string>,
+  jobs: {
+    expire_requests: "Booking expiry",
+    cleanup: "30-day cleanup",
+    landing_uptime: "Landing uptime check",
+    stale_listings: "Stale listing check",
+  } as Record<string, string>,
   events: {
     icons: { error: TriangleAlert, crash: Bug, bug_report: Bug, event: ScrollText, security: ShieldAlert } satisfies Record<EventKind, unknown>,
     sources: { api: "API", job: "Job", mobile: "Mobile app", admin: "Admin site", landing: "Landing site" } satisfies Record<EventSource, string>,
